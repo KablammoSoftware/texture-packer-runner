@@ -1,0 +1,20 @@
+group 'uk.co.kablammosoftware.tutorials.libgdx'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "com.badlogicgames.gdx:gdx-tools:1.9.2"
+}
+
+task pack(type:JavaExec) {
+    main = 'uk.co.kablammosoftware.tutorials.libgdx.texturepacker.TexturePackerRunner'
+    classpath = sourceSets.main.runtimeClasspath
+}
